@@ -1,0 +1,520 @@
+*{
+    font-family: 'Product Sans', sans-serif;
+    margin: 0;
+    /*color: rgb(215, 215, 215);*/
+}
+
+html{
+    /* height: 1080px;*/
+    height: auto;
+
+    background: -moz-linear-gradient(#333, #5c866e);
+    background: -webkit-linear-gradient(#333, #5c866e);
+    background: -o-linear-gradient(#333, #5c866e);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+@font-face { /*Permite que la gente pueda visualizar la fuente de la web*/
+    font-family: 'Product Sans'; /*a name to be used later*/
+    src: url('/Fonts/ProductSansRegular.ttf'); /*URL to font*/
+}
+
+.body{
+    font-size: 100%;
+}
+
+
+
+/*MainPage*/
+
+.grid-container{
+    position: center;
+    background-position-x: center;
+    background-position-y: center;
+    width: auto;
+    display: grid;
+    grid-template-columns: 70% 29%;
+    grid-template-rows: 100px 300px auto 100px;
+    grid-gap: 1%;
+}
+.grid-container > div{
+    /* background-color: transparent;*/
+    padding: 10px;
+}
+
+.headerPrincipal{
+    /*display: -webkit-flex; /* Safari */
+    -webkit-align-items: center; /* Safari 7.0+ */
+    align-items: center;
+
+    grid-column: 1 / 3;
+
+    justify-content: space-around;
+    margin: 20px auto auto;
+}
+
+#menuOpcions{
+    position: absolute;
+    top:70px;
+    left:155px;
+    /*display: flex;*/
+    text-align: center;
+    font-size: 15px;
+    word-spacing: 10px;
+}
+
+a.aOrange{
+    text-decoration: none;  /*treure subrallat als links*/
+    color: darkorange;
+}
+
+#mini{
+    font-size: medium;
+    margin: 20px;
+}
+
+a{
+    text-decoration: none;  /*treure subrallat als links*/
+}
+
+a:hover{    /* es subralla quan passem el ratolí per sobre l'enllaç */
+    text-decoration: underline;
+}
+
+.Slider{
+    grid-column: 1 / 3;
+    /*background-color: darkslategrey;*/
+}
+
+.Slide{
+    margin-left: -10px;
+    /*left: -20px;*/
+}
+
+.Catalogo{
+    /*background-color: darkolivegreen;*/
+}
+
+.Destacados{
+    background-color: #FFFFFF;
+    border-radius: 5px;
+    margin-right: 20px;
+    height: 430px;
+    position: sticky;
+    top: 100px;
+}
+
+.Footer{
+    grid-column: 1 / 3;
+    background: -o-linear-gradient(#333, #5c866e);
+}
+
+#Logo{
+    position: absolute;
+    left: 75px;
+    width: 15%;
+    -webkit-transition: filter 1s ease-in-out;
+    transition: filter 1s ease-in-out;
+}
+
+#Logo:hover{
+    filter: invert(100%);
+}
+
+.MenuIMG{
+    position: absolute;
+    width:1.5%;
+    top:37px;
+    margin-left:27px;
+    cursor: pointer;
+}
+
+#MenuCross, .elementMenu{ /*Ocultem aquests elements al comencament per després mostrar-los amb un toggle*/
+    display:none;
+}
+
+#menuUsuari{
+    position: absolute;
+    top:60px;
+    z-index: 1;
+    /* right:5% */
+
+}
+
+.menuUser .elementMenu {
+    padding: 5px;
+    width:150px;
+    background-color: rgb(215, 215, 215);
+    list-style-type: none;
+
+}
+
+.BackArrow {
+    position: absolute;
+    margin-left: 10px;
+    width:1.5%;
+    cursor: pointer;
+    display: none;
+    z-index: 1;
+}
+
+#category {
+    cursor: pointer;
+}
+
+.categories{
+    margin-left: 50px;
+    font-size: x-large;
+}
+.categories:hover{
+    /*text-decoration: none;*/
+    color: darkorange;
+}
+
+#Buscador{
+    width: 16%;
+    height: 35px;
+    border-width: 3px;
+    border-color: rgb(215, 215, 215);
+    border-radius: 45px;
+    color: rgb(215, 215, 215); /*Color del text*/
+    font-optical-sizing: auto;
+    font-weight: bold;
+
+    padding-left: 10px;
+    position: absolute;
+    top:20px;
+    right: 6%;
+    /*margin-top: 6px;*/
+    background: transparent url(imatges/Lupa.png) no-repeat scroll right;
+    background-size: 20px;
+    background-position-x: right 15px;
+    -webkit-transition: .35s ease-in-out;
+    transition: .35s ease-in-out;
+}
+
+#Buscador:focus {
+    width: 20%;
+}
+
+#Buscador:hover{
+    box-shadow: 0px 0px 15px rgba(92, 134, 110, 0.8);
+}
+
+#Cart{
+    position: absolute;
+    right: 2%;
+    width: 2.5%;
+    top:27px;
+    -webkit-transition: filter 1s ease-in-out;
+    transition: filter 1s ease-in-out;
+}
+
+#Cart:hover{
+    filter: invert(100%);
+}
+
+
+
+
+
+/* Login i Registre */
+
+.log, .registre {
+  margin: 5% auto 0;
+  width: 343px; 
+  height: 360px; 
+  border-radius: 8px/7px; 
+  background-color: #ebebeb; 
+  box-shadow: 1px 2px 5px rgba(0,0,0,.31); 
+  border: solid 1px #cbc9c9;
+  text-align: center;
+}
+
+#LoginForm{
+  margin: 0 30px;
+}
+
+#checkRecordar{
+    text-align: center;
+}
+
+.productes{
+    cursor: pointer;
+}
+
+hr{
+  color: #a9a9a9;
+  opacity: 0.3;
+}
+
+input{
+  margin: 5px;
+}
+
+a.button {
+  font-size: 14px;
+  font-weight: 600;
+  color: white;
+  padding: 6px 25px 0px 20px;
+  margin: 10px 8px 20px 0px;
+  display: inline-block;
+  float: right;
+  height: 27px; 
+  border-radius: 5px; 
+  background-color: #3a57af; 
+  box-shadow: 0 3px rgba(58,87,175,.75);
+}
+
+#Prover{
+    position: center;
+    background-position-y: center;
+    text-align: center;
+    color:white;
+}
+
+/* Layout Resposive  */
+
+@media (max-width: 800px) {   /* per dispositius de com a màxim 800px d'ample (engloba tablets i mòbils). Només mòbils:480px */
+
+/*  FER  */
+
+}
+
+/*Cart Bar*/
+.cartBar{
+    position: fixed;
+    height: 64px;
+    width: 100%;
+    background-color: #5c866e;
+    bottom: 0;
+    left: 0;
+    border-top: 3px solid #333333;
+    padding-left: 25px;
+    padding-right: 25px;
+
+    vertical-align: middle;
+    line-height: 64px;
+    cursor: pointer;
+}
+
+.cartBarCont{
+    display: grid;
+    grid-template-columns: 33.33% 33.33% 33.33%;
+    text-align: center;
+}
+
+/* SECCIÓ CONTACTE */
+
+#CaixaCont{
+    position: center;
+    /*top:100px;*/
+    text-align: center;
+    /*margin: 0 25% 0 25%;*/
+}
+
+#CaixaCont p{
+    font-size: 50px;
+}
+
+
+
+.twoElem{
+    position: center;
+    background-position-x: center;
+    background-position-y: center;
+    width: auto;
+    display: grid;
+    grid-template-rows: 100px auto;
+    grid-gap: 1%;
+    vertical-align: middle;
+}
+
+.threeElem{
+    position: center;
+    background-position-x: center;
+    background-position-y: center;
+    width: auto;
+    display: grid;
+    grid-template-rows: 100px auto 100px;
+    grid-gap: 1%;
+    vertical-align: middle;
+}
+
+.llistaCistella{
+    margin-left: 50px;
+}
+
+#LlistarCat footer{
+    /*margin:auto;*/
+}
+
+#Contingut li{
+    list-style: none;
+}
+
+#perfilUsuari {
+    margin-left: 50px;
+}
+
+.gridProd{
+    margin: 25px;
+    display: grid;
+    grid-template-columns: auto auto;
+    position: center;
+    text-align: center;
+    padding: 10px;
+    grid-gap: 25px;
+}
+
+.estilProds{
+    position: relative;
+    background-color: #FFF;
+    border-radius: 5px;
+    padding: 20px;
+    font-size: 30px;
+    text-align: center;
+    -webkit-transition: filter .35s ease-in-out;
+    transition: filter .35s ease-in-out;
+
+}
+.estilProds:hover .infoProd{
+    opacity: 1;
+}
+.estilProds:hover .dataProd{
+    filter: blur(3px);
+}
+
+.infoProd{
+    position: absolute;
+    text-align: center;
+    top: 35%;
+    opacity: 0;
+    -webkit-transition: opacity .35s ease-in-out;
+    transition: opacity .35s ease-in-out;
+    color:#5c866e;
+}
+
+.unicProd{
+    position: center;
+    grid-column: 1 / 2;
+    width: 700px;
+    height: 500px;
+}
+
+
+
+
+/*SLIDER*/
+
+* {box-sizing:border-box}
+
+/* Slideshow container */
+.slideshow-container {
+    max-width: 1540px;
+    position: relative;
+    margin: auto;
+}
+
+.mySlides img{
+    width: 100%;
+}
+
+/* Hide the images by default */
+.mySlides {
+    display: none;
+    margin: 0 -10px;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: darkorange;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+    color: darkorange;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+    background-color: darkorange;
+}
+
+/* Fading animation */
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+
+/* Missatges d'error */
+#error{
+    color: #ff2415;
+}
+
+/* Promocions */
+.fotoPromocio{
+    justify-content: center;
+}

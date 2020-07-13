@@ -1,0 +1,4 @@
+AuthType Basic
+AuthName "tdiw-f8"
+AuthUserFile /home/TDIW/tdiw-f8/public_html/.htpasswd
+Require valid-user
